@@ -1,7 +1,9 @@
 // Contains the label, the form field, and the button
 
-// type Props = {}
-export default function GreetUserInput() {
+interface Props {
+	onButtonClick: (draftUserName: string) => void;
+}
+export default function GreetUserInput({ onButtonClick }: Props) {
 	return (
 		<div
 			style={{ border: '2px dashed magenta' }}
@@ -28,6 +30,7 @@ export default function GreetUserInput() {
 					<button
 						type="button"
 						className="btn btn-primary"
+						onClick={() => onButtonClick('test username')}
 					>
 						Say Hello!
 					</button>

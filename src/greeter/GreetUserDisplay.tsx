@@ -1,13 +1,15 @@
 // Displays greeting from input from GreetUserInput
 
-// type Props = {}
-export default function GreetUserDisplay() {
+type Props = {
+	userName: string;
+};
+export default function GreetUserDisplay({ userName }: Props) {
 	return (
 		<div
 			style={{ border: '2px dotted orange' }}
 			className="p-2"
 		>
-			Greeting goes here
+			Hello, {userName}
 		</div>
 	);
 }
