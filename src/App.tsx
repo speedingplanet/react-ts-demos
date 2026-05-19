@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router';
 import VisibilityDemo from './visibility-tests/VisibilityDemo';
 import Home from './Home';
 import Greeter, { type Person } from './greeter/Greeter';
+import GreetUser from './greeter/GreetUser';
 
 let person: Person = {
 	firstName: 'John',
@@ -30,6 +31,9 @@ function App() {
 							<li>
 								<Link to="visibility-demo">Visbility Demo</Link>
 							</li>
+							<li>
+								<Link to="greet-user">Greet User</Link>
+							</li>
 						</ul>
 					</div>
 					<div className="col">
@@ -41,6 +45,10 @@ function App() {
 							<Route
 								path="visibility-demo"
 								element={<VisibilityDemo />}
+							/>
+							<Route
+								path="greet-user"
+								element={<GreetUser />}
 							/>
 						</Routes>
 					</div>
