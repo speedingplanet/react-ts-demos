@@ -1,9 +1,13 @@
 // Contains the label, the form field, and the button
 
+import { useState } from 'react';
+
 interface Props {
 	onButtonClick: (draftUserName: string) => void;
 }
 export default function GreetUserInput({ onButtonClick }: Props) {
+	const [draftUserName, setDraftUserName] = useState('');
+
 	return (
 		<div
 			style={{ border: '2px dashed magenta' }}
@@ -24,13 +28,15 @@ export default function GreetUserInput({ onButtonClick }: Props) {
 						name="personName"
 						id="person-name"
 						className="form-control"
+						value={draftUserName}
+						onChange={(event) => setDraftUserName(event.target.value)}
 					/>
 				</div>
 				<div className="col">
 					<button
 						type="button"
 						className="btn btn-primary"
-						onClick={() => onButtonClick('test username')}
+						onClick={() => onButtonClick(draftUserName)}
 					>
 						Say Hello!
 					</button>
