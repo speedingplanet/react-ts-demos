@@ -1,6 +1,16 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router';
 import VisibilityDemo from './visibility-tests/VisibilityDemo';
 import Home from './Home';
+import Greeter, { type Person } from './greeter/Greeter';
+
+let person: Person = {
+	firstName: 'John',
+	lastName: 'Paxton',
+	city: 'Nutley',
+	state: 'NJ',
+};
+
+let { firstName } = person;
 
 function App() {
 	return (
@@ -11,6 +21,8 @@ function App() {
 					<hr />
 				</div>
 			</header>
+			{/* <Greeter userName="John" /> */}
+			<Greeter userName={firstName} />
 			<BrowserRouter>
 				<div className="row">
 					<div className="col-3">
