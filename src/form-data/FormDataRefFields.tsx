@@ -22,7 +22,6 @@ function FormDataRefFields() {
 	const lastNameRef = useRef<HTMLInputElement>(null);
 	const cityRef = useRef<HTMLInputElement>(null);
 	const stateRef = useRef<HTMLInputElement>(null);
-	const formRef = useRef<HTMLFormElement>(null);
 
 	function handleFormUpdate() {
 		// Update the entire state object reference so React can detect it
