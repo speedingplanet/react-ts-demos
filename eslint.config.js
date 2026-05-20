@@ -20,6 +20,9 @@ export default defineConfig([
 		},
 	},
 	{
+		plugins: {
+			'@typescript-eslint': tseslint.plugin,
+		},
 		rules: {
 			'@typescript-eslint/no-unused-vars': 'warn',
 			'prefer-const': 'off',
