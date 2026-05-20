@@ -1,11 +1,3 @@
-// export default const Greeter = () => {
-// TODO: Can I pass in a user's name to render as part of the greeting?
-/*
-export default function Greeter({ userName }) {
-	return <p>Greetings, {userName}!</p>;
-}
-	*/
-
 export interface Person {
 	firstName: string;
 	lastName: string;
@@ -20,6 +12,7 @@ interface GreeterProps {
 	// user: Person | undefined
 	user?: Person;
 }
+
 /*
 // Using props object
 export default function Greeter(props: GreeterProps) {

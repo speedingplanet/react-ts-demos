@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
 // Object literal
 // let something = { prop: value }
 let person = {
@@ -11,7 +9,7 @@ let person = {
 
 let { lastName, state } = person;
 
-// @ts-expect-error('Demo code')
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 let { firstName: fName, state: stateOrProvince } = person;
 
 // Equivalent to
