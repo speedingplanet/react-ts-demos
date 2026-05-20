@@ -8,7 +8,6 @@ import PropsParent from './props-component/PropsParent';
 import EventHandling from './event-handling/EventHandling';
 import ConditionalDisplay from './conditional-display/ConditionalDisplay';
 import FormDataManager from './form-data/FormDataManager';
-import TodosManager from './todos/TodosManager';
 import IterativeContentManager from './iterative-content/IterativeContentManager';
 import RoutingManager from './routing/RoutingManager';
 import AsyncManager from './async-demos/AsyncManager';
@@ -107,10 +106,6 @@ function App() {
 							<Route
 								path="form-data/*"
 								element={<FormDataManager />}
-							/>
-							<Route
-								path="todos/*"
-								element={<TodosManager />}
 							/>
 							<Route
 								path="iterative-content/*"
