@@ -7,6 +7,7 @@ import FormWithContext from './form-context/FormWithContext';
 import FormWithReducer from './form-context/FormWithReducer';
 import './form-data.css';
 import FormWithContextAndReducer from './form-context/FormWithContextAndReducer';
+import FormDataRefFields from './FormDataRefFields';
 
 function FormDataManager() {
 	return (
@@ -29,6 +30,12 @@ function FormDataManager() {
 						</li>
 						<li>
 							<NavLink to="/form-data/single-state-object">Single state object</NavLink>
+						</li>
+						<li>
+							<NavLink to="/form-data/using-refs-on-fields">Using refs on fields</NavLink>
+						</li>
+						<li>
+							<NavLink to="/form-data/using-refs-on-form">Using refs on the form</NavLink>
 						</li>
 						<li>
 							<NavLink to="/form-data/plain-reducer">Just a Reducer</NavLink>
@@ -58,6 +65,14 @@ function FormDataManager() {
 						<Route
 							path="single-state-object"
 							element={<FormDataSingleStateObject />}
+						/>
+						<Route
+							path="using-refs-on-fields"
+							element={<FormDataRefFields />}
+						/>
+						<Route
+							path="using-refs-on-form"
+							element={<FormDataRefFields />}
 						/>
 						<Route
 							path="plain-context"
